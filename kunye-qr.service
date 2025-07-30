@@ -1,0 +1,15 @@
+[Unit]
+Description=Künye QR Sorgulama Sistemi
+After=network.target
+
+[Service]
+Type=simple
+User=are
+WorkingDirectory=/home/are/Desktop/kunye
+Environment=PATH=/home/are/Desktop/kunye/venv/bin
+ExecStart=/home/are/Desktop/kunye/venv/bin/python app.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
